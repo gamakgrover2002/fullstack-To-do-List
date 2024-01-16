@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
+  cursor: pointer;
 }
 
 body {
@@ -41,12 +42,11 @@ h4 {
   display: flex;
   align-items: center;
   transition: 0.5s;
-  cursor: Pointer;
+
   margin-bottom: 16px;
 }
 .todo:hover {
   opacity: 0.8;
-  
 }
 
 .todo .checkbox {
@@ -87,27 +87,27 @@ h4 {
   justify-content: center;
 }
 
-.addPopup{
+.addPopup {
   position: fixed;
   bottom: 32px;
-  right:32px;
-  display:flex;
+  right: 32px;
+  display: flex;
   align-items: center;
   justify-content: center;
 
   width: 64px;
   height: 64px;
   border-radius: 999px;
-  font-size:28px;
+  font-size: 28px;
   font-weight: 900;
   color: var(--light);
-  background-image: radial-gradient( var(--primary) 30% , var(--secondary));
+  background-image: radial-gradient(var(--primary) 30%, var(--secondary));
 }
-.popup{
+.popup {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,50%);
+  transform: translate(-50%, 50%);
   width: 100%;
   max-width: 400px;
   background-color: var(--light);
