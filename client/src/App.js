@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
-const api_base = "https://zesty-kitten-be32b3.netlify.app";
+const api_base = "http://localhost:3004";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  const [popupActive, setPopupActive] = useState(false); 
+  const [popupActive, setPopupActive] = useState(false);
   const [newTodo, setNewTodo] = useState("");
 
   useEffect(() => {
-    GetTodos(); 
+    GetTodos();
   }, []);
 
   const GetTodos = () => {
     fetch(api_base + "/todos")
-      .then((res) => res.json()) 
-      .then((data) => setTodos(data)) 
+      .then((res) => res.json())
+      .then((data) => setTodos(data))
       .catch((err) => console.error("Error: ", err));
   };
-  
 
   const completeTodo = async (id) => {
     const data = await fetch(api_base + "/todo/complete/" + id).then((res) =>
